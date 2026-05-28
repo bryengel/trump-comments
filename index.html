@@ -446,26 +446,26 @@
                   {impactMetrics && (
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       {/* BRENT IMPACT BLOCK */}
-                      <div className={`rounded-xl p-4 border ${impactMetrics.brentDiff < 0 ? 'bg-emerald-950/20 border-emerald-500/50' : 'bg-rose-950/20 border-rose-500/50'}`}>
-                        <p className="text-xs text-slate-400 uppercase font-bold mb-1">Brent Crude Price</p>
-                        <div className="flex flex-col">
-                          <span className={`text-4xl lg:text-5xl font-black tracking-tighter ${impactMetrics.brentDiff < 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                      <div className={`rounded-xl p-4 border flex flex-col min-w-0 ${impactMetrics.brentDiff < 0 ? 'bg-emerald-950/20 border-emerald-500/50' : 'bg-rose-950/20 border-rose-500/50'}`}>
+                        <p className="text-xs text-slate-400 uppercase font-bold mb-1 truncate">Brent Crude Price</p>
+                        <div className="flex flex-col min-w-0">
+                          <span className={`text-2xl lg:text-3xl xl:text-4xl font-black tracking-tighter break-words leading-none ${impactMetrics.brentDiff < 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
                             {impactMetrics.brentDiff > 0 ? '+' : ''}${impactMetrics.brentDiff.toFixed(2)}
                           </span>
-                          <span className={`text-lg font-mono font-bold mt-1 ${impactMetrics.brentDiff < 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
+                          <span className={`text-sm lg:text-base font-mono font-bold mt-2 ${impactMetrics.brentDiff < 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
                             ({impactMetrics.brentPct > 0 ? '+' : ''}{impactMetrics.brentPct.toFixed(2)}%)
                           </span>
                         </div>
                       </div>
 
                       {/* S&P IMPACT BLOCK */}
-                      <div className={`rounded-xl p-4 border ${impactMetrics.spDiff > 0 ? 'bg-emerald-950/20 border-emerald-500/50' : 'bg-rose-950/20 border-rose-500/50'}`}>
-                        <p className="text-xs text-slate-400 uppercase font-bold mb-1">S&P 500 Index</p>
-                        <div className="flex flex-col">
-                          <span className={`text-4xl lg:text-5xl font-black tracking-tighter ${impactMetrics.spDiff > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                      <div className={`rounded-xl p-4 border flex flex-col min-w-0 ${impactMetrics.spDiff > 0 ? 'bg-emerald-950/20 border-emerald-500/50' : 'bg-rose-950/20 border-rose-500/50'}`}>
+                        <p className="text-xs text-slate-400 uppercase font-bold mb-1 truncate">S&P 500 Index</p>
+                        <div className="flex flex-col min-w-0">
+                          <span className={`text-2xl lg:text-3xl xl:text-4xl font-black tracking-tighter break-words leading-none ${impactMetrics.spDiff > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
                             {impactMetrics.spDiff > 0 ? '+' : ''}{impactMetrics.spDiff.toFixed(0)}
                           </span>
-                          <span className={`text-lg font-mono font-bold mt-1 ${impactMetrics.spDiff > 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
+                          <span className={`text-sm lg:text-base font-mono font-bold mt-2 ${impactMetrics.spDiff > 0 ? 'text-emerald-500' : 'text-rose-500'}`}>
                             ({impactMetrics.spPct > 0 ? '+' : ''}{impactMetrics.spPct.toFixed(2)}%)
                           </span>
                         </div>
